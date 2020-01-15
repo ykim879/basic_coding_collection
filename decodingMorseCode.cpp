@@ -4,8 +4,7 @@
 #include<bitset>
 
 using namespace std;
-/*hashtable:
-purpose: save all the hashtable by hard coding*/
+
 class hashtable
 {
 public:
