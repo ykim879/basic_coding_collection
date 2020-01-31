@@ -57,7 +57,7 @@ public class ArrayList<T> {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("The index is out of bound");
         } else if (data == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Input data cannot be null.");
         } else if (size >= backingArray.length) {
             T[] arrtemp = (T[]) new Object[backingArray.length * 2];
             for (int i = 0; i < index; i++) {
