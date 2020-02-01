@@ -217,18 +217,18 @@ public class CircularSinglyLinkedList<T> {
         CircularSinglyLinkedListNode<T> beforelastOccurence = null;
         if (data == null) {
             throw new IllegalArgumentException("This is an empty list");
-        } else if (size == 1 && head.getData() == data) {
+        } else if (size == 1 && head.getData().equals(data)) {
             result = head.getData();
             head = null;
             size--;
             return result;
         } else {
             if (current != null) {
-                if (current.getData() == data) {
+                if (current.getData().equals(data)) {
                     beforelastOccurence = current;
                 }
                 for (int i = 0; i < size - 1; i++) {
-                    if (current.getNext().getData() == data) {
+                    if (current.getNext().getData().equals(data)) {
                         beforelastOccurence = current;
                     }
                     current = current.getNext();
@@ -237,7 +237,7 @@ public class CircularSinglyLinkedList<T> {
         }
         if (beforelastOccurence == null) {
             throw new NoSuchElementException("There is no such element");
-        } else if (beforelastOccurence == head && beforelastOccurence.getNext().getData() != data) {
+        } else if (beforelastOccurence == head && !beforelastOccurence.getNext().getData().equals(data)) {
             head.setData(head.getNext().getData());
             head.setNext(head.getNext().getNext());
             result = beforelastOccurence.getData();
