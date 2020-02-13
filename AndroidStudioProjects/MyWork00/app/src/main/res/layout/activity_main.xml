@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="142dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background"
+        android:text="Truth or Dare"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:layout_width="142dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background2"
+        android:text="Have I Had Ever" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="435dp"
+        android:src="@drawable/drinking"
+        android:text="Enjoy!" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft = "100dp"
+        android:hint = "Input Number of People!"
+        />
+
+
+</LinearLayout>
