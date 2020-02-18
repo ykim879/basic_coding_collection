@@ -22,3 +22,4 @@ class GTStudent(Base):
 
 Base.metadata.create_all(engine)
 yiyeon = GTStudent(gtid = 903550379, name = 'Yiyeon', graduateYear = 2021, gpa = 4.0)
+session.add(yiyeon)

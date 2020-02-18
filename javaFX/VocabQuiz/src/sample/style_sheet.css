@@ -1,0 +1,8 @@
+.background_intial_configuration{
+    -fx-background-image: url("/sample/img/images.jpg");
+    -fx-background-size: 100% 100%;
+}
+.background_get_started{
+    -fx-background-image: url("/sample/img/get_started_background.jpg");
+    -fx-background-size: 100% 100%;
+}
