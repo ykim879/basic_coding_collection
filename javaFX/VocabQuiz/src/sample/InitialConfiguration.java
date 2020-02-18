@@ -8,14 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import sample.Model.Chapters;
 import sample.Model.Level;
-
 import java.io.IOException;
 
 public class InitialConfiguration {
@@ -33,7 +30,7 @@ public class InitialConfiguration {
     private static Chapters chapter;
     private int result1,result2,result3;
     @FXML
-    private Button submit;
+    private ImageView submit;
     @FXML
     public void initialize() {
         levelOptions = FXCollections.observableArrayList();
@@ -105,16 +102,41 @@ public class InitialConfiguration {
     }
     @FXML
     private void submitPressed() throws IOException {
-        /*if(){
-
-        }*/
+        if (levels.getSelectionModel().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Level Error");
+            alert.setHeaderText("Level is not selected");
+            alert.setContentText("Please select a level");
+            alert.showAndWait();
+            return;
+        }
+        if(result1 + result2 + result3 > wordCount) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Invalid Word Count");
+            alert.setHeaderText("Word Count is invalid");
+            alert.setContentText("Please do not exceed the word count");
+            alert.showAndWait();
+            return;
+        } else if (result1 + result2 + result3 < wordCount) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+            ButtonType no = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.setTitle("Word Count Error");
+            alert.setHeaderText("You have not used all your word counts."
+                    + "Would you like to continue?");
+            alert.getButtonTypes().setAll(yes, no);
+            alert.showAndWait();
+            if (alert.getResult() == no) {
+                return;
+            }
+        }
         chapter = new Chapters(result1, result2, result3);
         // setup and display next scene
-        Scene scene = submit.getScene(); // get Scene from component
-        Stage stage = (Stage) scene.getWindow(); // get the Stage from Scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("get_started.fxml"));
-        Parent root = (Parent) loader.load();  // create a pane contain the view
-        scene.setRoot(root); // show the view
+        Scene scene = submit.getScene();
+        Stage stage = (Stage) scene.getWindow();
+        // create a pane contain the view
+        Parent root = FXMLLoader.load(getClass().getResource("get_started.fxml"));
+        scene.setRoot(root);
     }
     public static Chapters getChapter() {
         return chapter;
