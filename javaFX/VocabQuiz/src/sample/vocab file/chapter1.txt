@@ -1,0 +1,68 @@
+가깝다
+To be close
+멀다
+To be far
+길다
+To be long
+짧다
+To be short
+높다
+To be high
+낮다
+To be low
+춥다
+To be cold
+많다
+ To be many
+적다
+To be few/little
+맛있다
+To be tasty
+맛없다
+To be not tasty
+비싸다
+To be expensive
+싸다
+To be cheap
+빠르다
+To be fast
+느리다
+To be slow
+어렵다
+To be difficult
+쉽다
+To be easy
+작다
+To be small
+크다
+To be big 
+재미있다
+To be fun
+재미없다
+To be not fun
+좋다
+To be good
+나쁘다
+To be bad
+경치
+Scenery, view
+날씨
+Weather
+바다
+Sea
+박물관
+Museum
+휴가
+Vacation (from work)
+낚시하다
+To fish
+드라이브하다
+To drive
+스쿠버다이빙을 하다
+To scuba dive
+깨끗하다
+To be clean
+아름답다
+To be beautiful
+출장을 가다
+To go on a business trip

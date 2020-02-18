@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background_get_started" stylesheets="@style_sheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Model.GetStarted">
+<AnchorPane fx:id="screen" prefHeight="400.0" prefWidth="600.0" styleClass="background_get_started" stylesheets="@style_sheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GetStartedController">
    <children>
       <Label layoutX="105.0" layoutY="84.0" text="Let's get started!" textFill="#f5f3f3">
          <font>
             <Font name="Hannotate SC Regular" size="25.0" />
          </font>
       </Label>
+      <ImageView fx:id="nxtBtn" fitHeight="65.0" fitWidth="76.0" layoutX="451.0" layoutY="135.0" onMouseClicked="#clickNextBtn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-play-50.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
